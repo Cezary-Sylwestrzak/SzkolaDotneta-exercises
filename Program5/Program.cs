@@ -17,38 +17,28 @@
             Console.WriteLine(string.Empty);
 
             Console.WriteLine("Pytanie numer 1:");
-            
             Console.WriteLine("Podaj swoje imię.");
-            
-            string Imię = Console.ReadLine();
+            string firstName = Console.ReadLine();
 
             Console.WriteLine(string.Empty);
 
             Console.WriteLine("Pytanie numer 2:");
-
             Console.WriteLine("Podaj swoje nazwisko.");
-            
-            string Nazwisko = Console.ReadLine();
+            string lastName = Console.ReadLine();
 
             Console.WriteLine(string.Empty);
 
             Console.WriteLine("Pytanie numer 3:");
-
             Console.WriteLine("Podaj swój wiek.");
-
-            string Wiek = Console.ReadLine();
-
-            int WiekWłaściwy = int.Parse(Wiek);
+            string age = Console.ReadLine();
+            int changedAge = int.Parse(age);
 
             Console.WriteLine(string.Empty);
 
             Console.WriteLine("Pytanie numer 4:");
-
             Console.WriteLine("Wybierz swoją płeć.");
-
             Console.WriteLine("1.Mężczyzna.");
             Console.WriteLine("2.Kobieta.");
-
             string Płeć = Console.ReadLine();
             int PłećWłaściwa = int.Parse(Płeć);
 
@@ -86,6 +76,7 @@
             int Wzrost1 = int.Parse(Wzrost);
 
             Console.WriteLine(string.Empty);
+            
             Console.WriteLine("Pytanie numer 10:");
             Console.WriteLine("Podaj swoją wagę w kilogramach.");
             string Waga = Console.ReadLine();
@@ -98,10 +89,6 @@
             string KolorOczu = Console.ReadLine();
 
             Console.WriteLine(string.Empty);
-            
-            // Zakładam że numer pracownika został nadany przy podpisywaniu umowy o pracę,
-            // i osoba korzytsająca z programu ma już go w formie papierowej,
-            // Jeśli nie to można by było dodać funkcje która losuje numer z jakiegoś przedziału liczbowego (jeśli taka funkcja istnieje).
 
             Console.WriteLine("Pytanie numer 12:");
             Console.WriteLine("Podaj nadany ci numer pracownika.");
@@ -110,13 +97,17 @@
             
             Console.WriteLine(string.Empty);
 
+            
+            
             //Podsumowanie
+            
             Console.WriteLine("To już wszystkie pytania, sprawdz proszę czy podane przez Ciebie dane są poprawne.");
+            
             Console.WriteLine(string.Empty);
-            // I tutaj można by było zastosować typ wyświetlania w dwóch kolumnach aby dane były bardziej widoczne.
-            Console.WriteLine($"Imię:{Imię}");
-            Console.WriteLine($"Nazwisko:{Nazwisko}");
-            Console.WriteLine($"Wiek:{WiekWłaściwy}" + "lat.");
+            
+            Console.WriteLine($"Imię:{firstName}");
+            Console.WriteLine($"Nazwisko:{lastName}");
+            Console.WriteLine($"Wiek:{changedAge}" + "lat.");
 
             bool KtóraPłeć = PłećWłaściwa < 2;
             if (KtóraPłeć)
