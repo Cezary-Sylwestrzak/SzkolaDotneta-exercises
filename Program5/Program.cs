@@ -39,66 +39,61 @@
             Console.WriteLine("Wybierz swoją płeć.");
             Console.WriteLine("1.Mężczyzna.");
             Console.WriteLine("2.Kobieta.");
-            string Płeć = Console.ReadLine();
-            int PłećWłaściwa = int.Parse(Płeć);
+            string sex = Console.ReadLine();
+            int chosedSex = int.Parse(sex);
 
             Console.WriteLine(string.Empty);
 
             Console.WriteLine("Pytanie numer 5:");
             Console.WriteLine("Podaj swój numer telefonu.");
-            string NumerTelefonu = Console.ReadLine();
-            int NumerTelefonu1 = int.Parse(NumerTelefonu);
+            string telephoneNumber = Console.ReadLine();
+            int telephoneNumberInt = int.Parse(telephoneNumber);
 
             Console.WriteLine(string.Empty);
 
             Console.WriteLine("Pytanie numer 6:");
             Console.WriteLine("Podaj swój adres zamieszkania.");
-            string AdresZamieszkania = Console.ReadLine();
+            string adress = Console.ReadLine();
 
             Console.WriteLine(string.Empty);
 
             Console.WriteLine("Pytanie numer 7:");
             Console.WriteLine("Podaj swój numer PESEL.");
-            string PESEL = Console.ReadLine();
-            Int64 PESEL1 = Int64.Parse(PESEL);
+            string pesel = Console.ReadLine();
             
             Console.WriteLine(string.Empty);
             
             Console.WriteLine("Pytanie numer 8:");
             Console.WriteLine("Podaj swój adres email.");
-            string AdresEmail = Console.ReadLine();
+            string emailAdress = Console.ReadLine();
            
             Console.WriteLine(string.Empty);
 
             Console.WriteLine("Pytanie numer 9:");
-            Console.WriteLine("Podaj swój wzrost w centymetrach.");
-            string Wzrost = Console.ReadLine();
-            int Wzrost1 = int.Parse(Wzrost);
+            Console.WriteLine("Podaj swój wzrost, samą liczbę.");
+            string height = Console.ReadLine();
 
             Console.WriteLine(string.Empty);
             
             Console.WriteLine("Pytanie numer 10:");
             Console.WriteLine("Podaj swoją wagę w kilogramach.");
-            string Waga = Console.ReadLine();
-            float Waga1 = float.Parse(Waga);
+            string weight = Console.ReadLine();
+            float weightFloat = float.Parse(weight);
 
             Console.WriteLine(string.Empty);
 
             Console.WriteLine("Pytanie numer 11:");
             Console.WriteLine("Podaj swój kolor oczu");
-            string KolorOczu = Console.ReadLine();
+            string eyesColor = Console.ReadLine();
 
             Console.WriteLine(string.Empty);
 
             Console.WriteLine("Pytanie numer 12:");
             Console.WriteLine("Podaj nadany ci numer pracownika.");
-            string NumerPracownika = Console.ReadLine();
-            Int64 NumerPracownika1 = Int64.Parse(NumerPracownika);
+            string employeeNumber = Console.ReadLine();
             
             Console.WriteLine(string.Empty);
-
-            
-            
+ 
             //Podsumowanie
             
             Console.WriteLine("To już wszystkie pytania, sprawdz proszę czy podane przez Ciebie dane są poprawne.");
@@ -109,8 +104,8 @@
             Console.WriteLine($"Nazwisko:{lastName}");
             Console.WriteLine($"Wiek:{changedAge}" + "lat.");
 
-            bool KtóraPłeć = PłećWłaściwa < 2;
-            if (KtóraPłeć)
+            bool writeChosedSex = chosedSex < 2;
+            if (writeChosedSex)
             {
                 Console.WriteLine("Płeć: Mężczyzna.");
             }
@@ -119,17 +114,14 @@
                 Console.WriteLine("Płeć: Kobieta.");
             }
             
-            // Do numeru telefonu można jeszcze dodać konkretny sposób wyświetlania
-            // jeśli chcielibyśmy aby wyświetlało się 123-456-789 a nie 123456789
-            // ale uznałem że nie o to chodzi w tym zadaniu i sobie darowałem aby nie przekombinować.
-            Console.WriteLine($"Numer telefonu:{NumerTelefonu1}");
-            Console.WriteLine($"Adres zamieszkania:{AdresZamieszkania}");
-            Console.WriteLine($"Numer PESEL:{PESEL1}");
-            Console.WriteLine($"Adres Email:{AdresEmail}");
-            Console.WriteLine($"Wzrost:{Wzrost1}" + "cm.");
-            Console.WriteLine($"Waga:{Waga1}" + "kg");
-            Console.WriteLine($"Kolor oczu:{KolorOczu}");
-            Console.WriteLine($"Numer pracownika:{NumerPracownika1}");
+            Console.WriteLine($"Numer telefonu:{telephoneNumberInt}");
+            Console.WriteLine($"Adres zamieszkania:{adress}");
+            Console.WriteLine($"Numer PESEL:{pesel}");
+            Console.WriteLine($"Adres Email:{emailAdress}");
+            Console.WriteLine($"Wzrost:{height}" + "cm.");
+            Console.WriteLine($"Waga:{weightFloat}" + "kg");
+            Console.WriteLine($"Kolor oczu:{eyesColor}");
+            Console.WriteLine($"Numer pracownika:{employeeNumber}");
             
             Console.WriteLine(string.Empty);
             
