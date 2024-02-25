@@ -76,7 +76,7 @@
             Console.WriteLine(string.Empty);
             
             Console.WriteLine("Pytanie numer 10:");
-            Console.WriteLine("Podaj swoją wagę w kilogramach.");
+            Console.WriteLine("Podaj swoją wagę w kilogramach, samą liczbę.");
             string weight = Console.ReadLine();
             float weightFloat = float.Parse(weight);
 
