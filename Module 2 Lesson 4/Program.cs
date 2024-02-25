@@ -6,13 +6,13 @@ namespace Module_2_Lesson_4
     {
         static void Main(string[] args)
         {
-            string Imię;
-            string Nazwisko;
-            int Wiek;
-            char Płeć1 = 'M',
-                 Płeć2 = 'K';
-            Int64 PESEL;
-            Int64 numerPracownika;
+            string firstName;
+            string lastName;
+            int age;
+            char sex1 = 'M',
+                 sex2 = 'K';
+            Int64 pesel;
+            Int64 employeeNumber;
 
 
         }
