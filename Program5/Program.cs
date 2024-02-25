@@ -37,6 +37,9 @@
 
             Console.WriteLine("Pytanie numer 4:");
             Console.WriteLine("Wybierz swoją płeć.");
+            
+            Console.WriteLine(string.Empty);
+            
             Console.WriteLine("1.Mężczyzna.");
             Console.WriteLine("2.Kobieta.");
             string sex = Console.ReadLine();
@@ -47,8 +50,7 @@
             Console.WriteLine("Pytanie numer 5:");
             Console.WriteLine("Podaj swój numer telefonu.");
             string telephoneNumber = Console.ReadLine();
-            int telephoneNumberInt = int.Parse(telephoneNumber);
-
+            
             Console.WriteLine(string.Empty);
 
             Console.WriteLine("Pytanie numer 6:");
@@ -114,7 +116,7 @@
                 Console.WriteLine("Płeć: Kobieta.");
             }
             
-            Console.WriteLine($"Numer telefonu:{telephoneNumberInt}");
+            Console.WriteLine($"Numer telefonu:{telephoneNumber}");
             Console.WriteLine($"Adres zamieszkania:{adress}");
             Console.WriteLine($"Numer PESEL:{pesel}");
             Console.WriteLine($"Adres Email:{emailAdress}");
