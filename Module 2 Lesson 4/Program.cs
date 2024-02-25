@@ -11,8 +11,8 @@ namespace Module_2_Lesson_4
             int age;
             char sex1 = 'M',
                  sex2 = 'K';
-            Int64 pesel;
-            Int64 employeeNumber;
+            string pesel;
+            string employeeNumber;
 
 
         }
