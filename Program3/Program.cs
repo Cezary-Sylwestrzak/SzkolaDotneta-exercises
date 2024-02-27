@@ -26,10 +26,7 @@ namespace Program3
             Console.WriteLine("Przekątna prostokąta wynosi:");
             int power = 2;
             Console.WriteLine(Math.Sqrt(Math.Pow(valueNumberOneInt, power) + Math.Pow(valueNumberTwoInt, power)));
-
-           
-            
-        }
-        
+ 
+        }  
     }
 }

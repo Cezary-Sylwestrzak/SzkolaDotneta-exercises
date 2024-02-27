@@ -6,14 +6,13 @@ namespace Module_2_Lesson_4
     {
         static void Main(string[] args)
         {
-            string firstName;
-            string lastName;
-            int age;
+            string firstName = "Kamil";
+            string lastName = "Gorczyca";
+            int age = 25;
             char sex1 = 'M',
                  sex2 = 'K';
-            string pesel;
-            string employeeNumber;
-
+            string pesel = "87100945874";
+            string employeeNumber = "4568521397";
 
         }
     }

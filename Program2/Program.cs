@@ -8,10 +8,6 @@
             string b = "B";
             string c = "C";
             Console.WriteLine(c + b + a);
-            
-
-
-
 
         }
     }

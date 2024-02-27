@@ -129,23 +129,10 @@
             
             Console.WriteLine("Jeśli wszystkie dane się zgadzają zakończ pracę programu wciskając klawisz ENTER.");
             Console.WriteLine("Jeśli widzisz jakiś błąd wciśnij klawisz F1 aby zacząć proces od nowa.");
+            
             // I tutaj można dodać jeszcze warunek logiczny który obsługował by klawisz F1,
             // oraz wyświetlał wiadomość pożegnalną jeśli wszystko było by dobrze. 
-            
-
-
-
-
 
         }
-    
-    
-    
-    
-    
-    
-    
-    
-    
     }
 }

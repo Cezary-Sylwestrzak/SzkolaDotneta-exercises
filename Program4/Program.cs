@@ -9,11 +9,7 @@ namespace Program4
             int a = 10;
             string b = "Szkoła Dotneta";
             float c = 12.5F;
-        
-        
-        
-        
-        }
-            
+
+        }     
     }
 }
