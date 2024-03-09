@@ -11,22 +11,43 @@ namespace Program3
 
             Console.WriteLine(string.Empty);
 
-            Console.WriteLine("Podaj długość pierwszego boku.");
-            string valueNumberOne = Console.ReadLine();
-            int valueNumberOneInt = int.Parse(valueNumberOne);
+            double userInputOneChanged;
+            bool isNotANumber = false;
+            do
+            {
+                Console.WriteLine("Podaj długość pierwszego boku:");
+
+                isNotANumber = double.TryParse(Console.ReadLine(), out userInputOneChanged);
+
+                if (!isNotANumber)
+                {
+                    Console.WriteLine("To nie jest wartość liczbowa! Wprowadź ponownie długość pierwszego boku używając w tym celu wartości liczbowych.");
+                }
+            }
+            while (!isNotANumber);
 
             Console.WriteLine(string.Empty);
 
-            Console.WriteLine("Podaj długość drugiego boku.");
-            string valueNumberTwo = Console.ReadLine();
-            int valueNumberTwoInt = int.Parse(valueNumberTwo);
+            double userInputTwoChanged;
+            bool isNotANumberNext = false;
+            do
+            {
+                Console.WriteLine("Podaj długość drugiego boku:");
+
+                isNotANumberNext = double.TryParse(Console.ReadLine(), out userInputTwoChanged);
+
+                if (!isNotANumberNext)
+                {
+                    Console.WriteLine("To nie jest wartość liczbowa! Wprowadź ponownie długość drugiego boku używając w tym celu wartości liczbowych.");
+                }
+            }
+            while (!isNotANumberNext);
 
             Console.WriteLine(string.Empty);
 
             Console.WriteLine("Przekątna prostokąta wynosi:");
             int power = 2;
-            Console.WriteLine(Math.Sqrt(Math.Pow(valueNumberOneInt, power) + Math.Pow(valueNumberTwoInt, power)));
- 
+            Console.WriteLine(Math.Sqrt(Math.Pow(userInputOneChanged, power) + Math.Pow(userInputTwoChanged, power)));
         }  
     }
 }

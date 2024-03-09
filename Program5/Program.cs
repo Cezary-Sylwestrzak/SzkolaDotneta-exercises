@@ -5,15 +5,11 @@
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Witaj nowy pracowniku!");
-            
+            Console.WriteLine("Witaj nowy pracowniku!");            
             Console.WriteLine("Za chwilę przeprowadzimy Cię przez proces rejestracji w systemie.");
-            
             Console.WriteLine("Kiedy skończymy, będziesz figurował w systemie jako nowy pracownik.");
-            
             Console.WriteLine("Teraz zadamy Ci kilka pytań, prosimy o szczerą odpowiedź.");
 
-            // Używam pustych string-ów aby wiadomości w konsoli były bardziej widoczne.
             Console.WriteLine(string.Empty);
 
             Console.WriteLine("Pytanie numer 1:");
@@ -29,9 +25,20 @@
             Console.WriteLine(string.Empty);
 
             Console.WriteLine("Pytanie numer 3:");
-            Console.WriteLine("Podaj swój wiek.");
-            string age = Console.ReadLine();
-            int changedAge = int.Parse(age);
+            int age;
+            bool ageIsANumber = false;
+            do
+            {
+                Console.WriteLine("Podaj swój wiek, samą liczbę.");
+
+                ageIsANumber = int.TryParse(Console.ReadLine(), out age);
+
+                if (!ageIsANumber)
+                {
+                    Console.WriteLine("To nie jest wartość liczbowa! Podaj ponownie swój wiek używając w tym celu TYLKO wartości liczbowej.");
+                }
+            }
+            while (!ageIsANumber);
 
             Console.WriteLine(string.Empty);
 
@@ -72,15 +79,40 @@
             Console.WriteLine(string.Empty);
 
             Console.WriteLine("Pytanie numer 9:");
-            Console.WriteLine("Podaj swój wzrost, samą liczbę.");
-            string height = Console.ReadLine();
+            double height;
+            bool heightIsANumber = false;
+            do
+            {
+                Console.WriteLine("Podaj swój wzrost, samą liczbę.");
+
+                heightIsANumber = double.TryParse(Console.ReadLine(), out height);
+
+                if (!heightIsANumber)
+                {
+                    Console.WriteLine("To nie jest wartość liczbowa! Podaj ponownie swój wzrost używając w tym celu TYLKO wartości liczbowej.");
+                }
+            }
+            while (!heightIsANumber);
 
             Console.WriteLine(string.Empty);
             
             Console.WriteLine("Pytanie numer 10:");
-            Console.WriteLine("Podaj swoją wagę w kilogramach, samą liczbę.");
-            string weight = Console.ReadLine();
-            float weightFloat = float.Parse(weight);
+
+            double weight;
+            bool weightIsANumber = false;
+            do
+            {
+                Console.WriteLine("Podaj swóją wagę, samą liczbę.");
+
+                weightIsANumber = double.TryParse(Console.ReadLine(), out weight);
+
+                if (!weightIsANumber)
+                {
+                    Console.WriteLine("To nie jest wartość liczbowa! Podaj ponownie swoją wagę używając w tym celu TYLKO wartości liczbowej.");
+                }
+            }
+            while (!weightIsANumber);
+
 
             Console.WriteLine(string.Empty);
 
@@ -95,8 +127,6 @@
             string employeeNumber = Console.ReadLine();
             
             Console.WriteLine(string.Empty);
- 
-            //Podsumowanie
             
             Console.WriteLine("To już wszystkie pytania, sprawdz proszę czy podane przez Ciebie dane są poprawne.");
             
@@ -104,7 +134,7 @@
             
             Console.WriteLine($"Imię:{firstName}");
             Console.WriteLine($"Nazwisko:{lastName}");
-            Console.WriteLine($"Wiek:{changedAge}" + "lat.");
+            Console.WriteLine($"Wiek:{age}" + "lat.");
 
             bool writeChosedSex = chosedSex < 2;
             if (writeChosedSex)
@@ -121,7 +151,7 @@
             Console.WriteLine($"Numer PESEL:{pesel}");
             Console.WriteLine($"Adres Email:{emailAdress}");
             Console.WriteLine($"Wzrost:{height}" + "cm.");
-            Console.WriteLine($"Waga:{weightFloat}" + "kg");
+            Console.WriteLine($"Waga:{weight}" + "kg");
             Console.WriteLine($"Kolor oczu:{eyesColor}");
             Console.WriteLine($"Numer pracownika:{employeeNumber}");
             
